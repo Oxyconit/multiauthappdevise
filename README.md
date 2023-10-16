@@ -38,7 +38,7 @@ And go to the app via http://your-local-ip-computer.nip.io:3000
 
 ### SAML and Google OAuth2 Configuration Details
 
-See [multi_auth_devise.rb](config%2Fmulti_auth_devise.rb)
+See [config/initializers/multi_auth_devise.rb](config/initializers/multi_auth_devise.rb)
 
 ### License
 This project is licensed under the MIT License.
