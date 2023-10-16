@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
   protected
 
   def after_sign_out_path_for(_resource_or_scope)
-    if session['saml_uid'] && session['saml_session_index'] # make sure 'idp_slo_service_url' is configured! or add check for that
+    if session['saml_uid'] && session['saml_session_index'] # && saml_config.idp_slo_service_url.present? # make sure 'idp_slo_service_url' is configured!
       user_saml_omniauth_authorize_path + '/spslo'
     else
       new_user_session_path
